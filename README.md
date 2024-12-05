@@ -1,16 +1,22 @@
 # Azure KQL Security Review: Demo Environment
 _Review your Azure security with the power of KQL!_
 
+> :snowflake: This lab was created as a part of [Cloud Security Podcast's "24 Days of Cloud"](https://advent.cloudsecuritypodcast.tv/) 2024 video event. Check it out!
+
 ## Purpose
 This repository is an easy lab to demonstrate how [Azure Resource Graph's](https://learn.microsoft.com/en-us/azure/governance/resource-graph/) KQL searches can be used to provide a quick, high-level security review. The `terraform` directory will deploy a few Azure resources (VMs, storage, Cosmos DB) with various network exposures. Alternatively, you can run the [queries below](#demo-kql-security-review-queries) against your own existing environment without any risk of modifying infrastructure or generating alerts.
 
-The Azure Resource Graph provides a fantastic, super-quick database of all Azure resources a user has Reader access to within an Azure tenant. The ability to query all resources and most resource properties at scale is incredibly helpful to understand all your Azure assets at once. This makes it helpful to get a handle on common network exposures and security issues.
-
-If Terraform is new to you, don't worry: The code is broken into several small files that work with the with the `azurerm` resource provider to create configurations in your own Azure test environment. The goal of presenting content in this way is to make it easy to quickly understand and adapt if you want to play with these files.
-
-The cost of running this demo environment for a couple hours should be below $5 USD. If you're concerned about cost, run `terraform destroy` whenever you aren't using the lab actively.
+The [Azure Resource Graph Explorer](https://portal.azure.com/#view/HubsExtension/ArgQueryBlade) provides a fantastic, super-quick web query to a database of all Azure resources within an Azure tenant. (Access to query resources is based on your Reader or equivalent roles across the tenant.) This ability to query all resources and most resource properties at scale is incredibly helpful to understand all your Azure assets at once, especially when exploring network exposures and security issues.
 
 More defenders should know about the power of KQL for quick security reporting! It's my hope this lab can get you started.
+
+### New to Terraform?
+If Terraform is new to you, don't worry: The code is broken into several small files that work with the with the `azurerm` resource provider to create configurations in your own Azure test environment. The goal of presenting content in this way is to make it easy to quickly understand and adapt if you want to play with these files.
+
+### Cost?
+The cost of running this demo environment for a couple hours should be below $5 USD. If you're concerned about running up costs, use `terraform destroy` whenever you aren't actively playing with the lab. Running these queries against an existing Azure environment to see what turns up is free.
+
+This also makes the Azure Resource Graph Explorer a great way to start environment review before your CSPM budget kicks in.
 
 ## Structure
 Demo KQL queries for this lab and sample security reviews are available [further down this page](#demo-kql-security-review-queries).
