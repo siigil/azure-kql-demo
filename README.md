@@ -1,7 +1,7 @@
 # Azure KQL Security Review: Demo Environment
 _Review your Azure security with the power of KQL!_
 
-> :snowflake: This lab was created as a part of [Cloud Security Podcast's "24 Days of Cloud"](https://advent.cloudsecuritypodcast.tv/) 2024 video event. Check it out!
+> :snowflake: This lab was created as a part of [Cloud Security Podcast's "24 Days of Cloud"](https://advent.cloudsecuritypodcast.tv/) video event. Check it out!
 
 ## Purpose
 This repository is an easy lab to demonstrate how [Azure Resource Graph's](https://learn.microsoft.com/en-us/azure/governance/resource-graph/) KQL searches can be used to provide a quick, high-level security review. The `terraform` directory will deploy a few Azure resources (VMs, storage, Cosmos DB) with various network exposures. Alternatively, you can run the [queries below](#demo-kql-security-review-queries) against your own existing environment without any risk of modifying infrastructure or generating alerts.
