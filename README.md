@@ -3,6 +3,10 @@ _Review your Azure security with the power of KQL!_
 
 > :snowflake: This lab was created as a part of [Cloud Security Podcast's "24 Days of Cloud"](https://advent.cloudsecuritypodcast.tv/) video event. Check it out!
 
+Are you still waiting on CSPM budget? Have a few unmanaged Azure tenants to review? Or just curious to see your subscription's public Azure exposure?
+
+The [Azure Resource Graph Explorer](https://portal.azure.com/#view/HubsExtension/ArgQueryBlade) can help! This web interface lets you query all your Azure infrastructure for common exposures. Try this lab out for a quick introduction on how KQL queries in the Resource Graph Explorer can help you report on VM, Storage, and Cosmos DB network exposures.
+
 ## Purpose
 This repository is an easy lab to demonstrate how [Azure Resource Graph's](https://learn.microsoft.com/en-us/azure/governance/resource-graph/) KQL searches can be used to provide a quick, high-level security review. The `terraform` directory will deploy a few Azure resources (VMs, storage, Cosmos DB) with various network exposures. Alternatively, you can run the [queries below](#demo-kql-security-review-queries) against your own existing environment without any risk of modifying infrastructure or generating alerts.
 
