@@ -5,7 +5,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 resource "azurerm_cosmosdb_account" "db" {
-  for_each = local.cosmosdb_config
+  for_each            = local.cosmosdb_config
   name                = "${local.resource_prefix}-cosmosdb-${each.value.suffix}"
   location            = azurerm_resource_group.lab_environment.location
   resource_group_name = azurerm_resource_group.lab_environment.name

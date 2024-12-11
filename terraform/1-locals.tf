@@ -19,22 +19,22 @@ locals {
   resource_prefix = "kql-demo-env"
   vm_config = {
     vm1 = {
-        suffix = "win"
-        os_type = "Windows"
-        image_publisher = "MicrosoftWindowsServer"
-        image_offer = "WindowsServer"
-        image_sku = "2019-Datacenter"
-        image_version = "latest"
-        allowed_port = 3389
+      suffix          = "win"
+      os_type         = "Windows"
+      image_publisher = "MicrosoftWindowsServer"
+      image_offer     = "WindowsServer"
+      image_sku       = "2019-Datacenter"
+      image_version   = "latest"
+      allowed_port    = 3389
     }
     vm2 = {
-        suffix = "linux"
-        os_type = "Linux"
-        image_publisher = "Canonical"
-        image_offer = "0001-com-ubuntu-server-jammy"
-        image_sku = "22_04-lts"
-        image_version = "latest"
-        allowed_port = 443
+      suffix          = "linux"
+      os_type         = "Linux"
+      image_publisher = "Canonical"
+      image_offer     = "0001-com-ubuntu-server-jammy"
+      image_sku       = "22_04-lts"
+      image_version   = "latest"
+      allowed_port    = 443
     }
   }
   cosmosdb_config = {
@@ -48,19 +48,19 @@ locals {
     }
   }
   # Variables need to be shortened for 24 character limits (which count vars)
-  storage_config_public ={
+  storage_config_public = {
     s1 = {
-      s = "s1"
+      s                = "s1"
       container_public = "blob"
     }
   }
-  storage_config_restricted ={
+  storage_config_restricted = {
     s2 = {
-      s = "s2"
+      s                = "s2"
       container_public = "private"
     }
   }
-  storage_config_private ={
+  storage_config_private = {
     s3 = {
       s = "s3"
     }
