@@ -14,6 +14,13 @@ The [Azure Resource Graph Explorer](https://portal.azure.com/#view/HubsExtension
 
 More defenders should know about the power of KQL for quick security reporting! It's my hope this lab can get you started.
 
+### Walkthrough
+You can find a walkthrough of this lab content as part of Cloud Security Podcast's "24 Days of Cloud" event on Day 14:
+- [24 Days of Cloud: Day 14](https://advent.cloudsecuritypodcast.tv/)
+
+Or, go straight to the walkthrough here:
+- [Azure Security Assessments Using Resource Graph Explorer](https://www.youtube.com/watch?v=XqNsmfaBZ6Y)
+
 ### New to Terraform?
 If Terraform is new to you, don't worry: The code is broken into several small files that work with the with the `azurerm` resource provider to create configurations in your own Azure test environment. The goal of presenting content in this way is to make it easy to quickly understand and adapt if you want to play with these files.
 
